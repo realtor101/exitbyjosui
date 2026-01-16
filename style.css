@@ -33,3 +33,22 @@
 .listing-card {
   cursor: default;
 }
+/* ========================= */
+/* FINAL CARD HOVER FIX */
+/* ========================= */
+
+.card,
+.listing-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.listing-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 20px rgba(201, 162, 77, 0.45),
+    0 0 40px rgba(201, 162, 77, 0.25);
+}
