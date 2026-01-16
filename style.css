@@ -4,27 +4,24 @@
   box-sizing: border-box;
 }
 
-/* THEME */
 :root {
-  --black: #0a1020;        /* deep luxury navy */
-  --black-soft: #0f1730;   /* softer navy for section contrast */
+  --navy: #0a1020;
+  --navy-soft: #0f1730;
   --gold: #c9a24d;
   --gold-soft: #e0c57a;
   --white: #f5f5f5;
 }
 
-
-/* BASE */
 body {
   font-family: 'Satoshi', sans-serif;
-  background: var(--black);
+  background: var(--navy);
   color: var(--white);
 }
 
 /* SECTIONS */
 .section {
   min-height: 100vh;
-  padding: 110px 22px;
+  padding: 120px 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,12 +30,20 @@ body {
 }
 
 .section.dark {
-  background: var(--black-soft);
+  background: var(--navy-soft);
+}
+
+/* LABELS */
+.label {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: var(--gold-soft);
+  margin-bottom: 12px;
 }
 
 /* HERO */
 .hero {
-  background: #000;
+  background: #050914;
 }
 
 .headshot {
@@ -54,7 +59,7 @@ body {
 h1 {
   font-size: 3.8rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 h2 {
@@ -78,14 +83,22 @@ p {
   line-height: 1.8;
 }
 
-.brokerage {
+.tagline {
+  font-size: 1.35rem;
+  max-width: 700px;
+  opacity: 0.95;
+  margin-top: 20px;
+}
+
+.section-intro {
   font-size: 1.25rem;
   opacity: 0.9;
 }
 
-.license {
-  font-size: 1.1rem;
-  opacity: 0.75;
+/* SERVICES */
+.services p {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
 }
 
 /* BUTTONS */
