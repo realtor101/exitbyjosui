@@ -39,9 +39,7 @@ body {
   letter-spacing: 6px;
   font-weight: 700;
   color: var(--gold-soft);
-  margin-bottom: 28px; /* more space since no h2 */
-}
-
+  margin-bottom: 28px;
 }
 
 /* HERO */
@@ -66,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4rem;          /* smaller than before */
+  font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 32px;
   color: var(--gold);
@@ -104,7 +102,7 @@ p {
   margin-bottom: 10px;
 }
 
-/* BUTTONS */
+/* HERO BUTTONS */
 .buttons {
   margin-top: 38px;
   display: flex;
@@ -120,6 +118,13 @@ p {
   text-decoration: none;
   border-radius: 10px;
   font-size: 1.15rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttons a:hover,
+.main-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(201, 162, 77, 0.35);
 }
 
 /* SOCIALS */
@@ -133,6 +138,39 @@ p {
   color: var(--gold);
   font-size: 1.35rem;
   text-decoration: none;
+}
+
+/* CONTACT BUTTONS */
+.contact-buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-btn {
+  padding: 18px 34px;
+  background: var(--gold);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(201, 162, 77, 0.35);
+}
+
+.address {
+  margin-top: 45px;
+  font-size: 1.2rem;
+  opacity: 0.85;
 }
 
 /* MOBILE */
