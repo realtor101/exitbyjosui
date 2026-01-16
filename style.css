@@ -26,8 +26,8 @@ body {
   padding: 120px 22px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -100,14 +100,12 @@ p {
   box-shadow:
     0 0 18px rgba(201, 162, 77, 0.6),
     0 0 36px rgba(201, 162, 77, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 0 22px rgba(201, 162, 77, 0.7),
-    0 0 44px rgba(201, 162, 77, 0.45);
+.btn.outline {
+  background: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
 }
 
 .buttons,
@@ -119,19 +117,96 @@ p {
   margin-top: 32px;
 }
 
-/* CARDS (TESTIMONIALS + LISTINGS) */
-.card,
+/* TESTIMONIALS */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 900px;
+}
+
+.card {
+  padding: 30px;
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.02);
+}
+
+.author {
+  display: block;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: var(--gold);
+}
+
+.rating {
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+/* SOLD HOMES */
+.sold-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin-top: 40px;
+}
+
+.sold-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid var(--gold);
+}
+
+/* LISTINGS */
+.listing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
 .listing-card {
   padding: 30px;
   border: 1px solid var(--gold);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* CARD HOVER (SAFE) */
-.card:hover,
-.listing-card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 0 20px rgba(201, 162, 77, 0.45),
+.listing-card h4 {
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+/* MOBILE BAR */
+.mobile-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .mobile-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--navy-soft);
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0;
+  }
+
+  body {
+    padding-bottom: 80px;
+  }
+}
