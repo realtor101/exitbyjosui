@@ -42,6 +42,15 @@ body {
   margin-bottom: 28px;
 }
 
+.label::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 14px auto 0;
+}
+
 /* HERO */
 .hero {
   background: #050914;
@@ -102,18 +111,31 @@ p {
   margin-bottom: 10px;
 }
 
-/* HERO BUTTONS */
-.buttons {
+/* BUTTONS */
+.buttons,
+.contact-buttons {
   margin-top: 38px;
   display: flex;
+  flex-wrap: wrap;
   gap: 22px;
+  justify-content: center;
+}
+
+.primary-btn {
+  background: var(--gold);
+  color: #000;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
 }
 
 .buttons a,
-.main-link {
+.main-link,
+.contact-btn {
   padding: 18px 40px;
-  background: var(--gold);
-  color: #000;
   font-weight: 600;
   text-decoration: none;
   border-radius: 10px;
@@ -122,7 +144,8 @@ p {
 }
 
 .buttons a:hover,
-.main-link:hover {
+.main-link:hover,
+.contact-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(201, 162, 77, 0.35);
 }
@@ -140,40 +163,18 @@ p {
   text-decoration: none;
 }
 
-/* CONTACT BUTTONS */
-.contact-buttons {
-  margin-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.contact-btn {
-  padding: 18px 34px;
-  background: var(--gold);
-  color: #000;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 10px;
-  min-width: 220px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.contact-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(201, 162, 77, 0.35);
-}
-
+/* ADDRESS */
 .address {
   margin-top: 45px;
   font-size: 1.2rem;
   opacity: 0.85;
 }
 
-/* MOBILE */
+/* MOBILE STICKY BAR */
+.mobile-bar {
+  display: none;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.8rem;
@@ -189,5 +190,32 @@ p {
 
   .buttons {
     flex-direction: column;
+  }
+
+  .mobile-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--navy-soft);
+    border-top: 1px solid rgba(201,162,77,0.3);
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0;
+    z-index: 999;
+  }
+
+  .mobile-bar a {
+    background: var(--gold);
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+
+  body {
+    padding-bottom: 80px;
   }
 }
